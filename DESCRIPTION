@@ -1,0 +1,16 @@
+Package: URLazyR
+Title: Download files from websites in R
+Version: 0.0.0.9000
+Authors@R: c(person("Di", "Cook", role = c("aut")), 
+              person("Anthony", "Ebert", role = c("aut", "cre"), email = "anthonyebert+CRAN@gmail.com"))
+Description: Searches html pages for urls with certain file extensions and provides an easy way to download them
+Depends:
+    R (>= 3.3.2), 
+    magrittr
+Imports:
+    urltools, 
+    xml2
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
