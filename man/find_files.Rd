@@ -11,6 +11,9 @@ find_files(url, extension)
 
 \item{extension}{string of file extension required (without the dot)}
 }
+\value{
+Character vector of URLs
+}
 \description{
 List all files with a certain extension from a URL
 }

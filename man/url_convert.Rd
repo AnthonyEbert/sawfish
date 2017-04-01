@@ -6,7 +6,19 @@
 \usage{
 url_convert(url, base)
 }
+\arguments{
+\item{url}{string of URL}
+
+\item{base}{string of domain URL}
+}
+\value{
+character vector of absolute URLs
+}
 \description{
 Convert relative URLs to absolute URLs
+}
+\examples{
+aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
+find_files(aec_website, "zip") \%>\% url_convert(aec_website)
 }
 

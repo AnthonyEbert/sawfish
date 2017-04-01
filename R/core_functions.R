@@ -9,6 +9,7 @@
 #' find_files(aec_website, "zip")
 #' find_files(aec_website, "zip") %>% url_convert(aec_website)
 #' (find_files(aec_website, "zip") %>% url_convert(aec_website))[c(1,2)] %>% download.files()
+#' @return Character vector of URLs
 #' @export
 find_files <- function(url, extension){
   ext_pattern <- paste("*.", extension, sep = "")
@@ -28,6 +29,12 @@ find_files <- function(url, extension){
 
 #' Convert relative URLs to absolute URLs
 #' @export
+#' @param url string of URL
+#' @param base string of domain URL
+#' @examples
+#' aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
+#' find_files(aec_website, "zip") %>% url_convert(aec_website)
+#' @return character vector of absolute URLs
 url_convert <- function(url, base){
 
   htx <- urltools::scheme(url)
@@ -42,6 +49,9 @@ url_convert <- function(url, base){
 
 #' Download multiple files given a list of URLs
 #' @export
+#' @param url character vector of URLs
+#' @param destfile character vector of resulting filenames
+#' @return VOID
 download.files <- function(url, destfile = basename(url)){
   for(i in 1:length(url)){
     download.file(url[i], destfile[i])

@@ -6,6 +6,14 @@
 \usage{
 download.files(url, destfile = basename(url))
 }
+\arguments{
+\item{url}{character vector of URLs}
+
+\item{destfile}{character vector of resulting filenames}
+}
+\value{
+VOID
+}
 \description{
 Download multiple files given a list of URLs
 }
