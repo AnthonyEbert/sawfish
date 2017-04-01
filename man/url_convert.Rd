@@ -2,9 +2,9 @@
 % Please edit documentation in R/core_functions.R
 \name{url_convert}
 \alias{url_convert}
-\title{Convert relative URLs to absolute URLs}
+\title{Convert URLs (relative or absolute) to absolute URLs}
 \usage{
-url_convert(url, base)
+url_convert(url, base = attr(url, "base"))
 }
 \arguments{
 \item{url}{string of URL}
@@ -15,10 +15,11 @@ url_convert(url, base)
 character vector of absolute URLs
 }
 \description{
-Convert relative URLs to absolute URLs
+Convert URLs (relative or absolute) to absolute URLs
 }
 \examples{
 aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
 find_files(aec_website, "zip") \%>\% url_convert(aec_website)
+find_files("https://catalog.data.gov/dataset?metadata_type=geospatial&_metadata_type_limit=0&q=\%22Congressional\%20Districts\%22", "zip") \%>\% url_convert()
 }
 

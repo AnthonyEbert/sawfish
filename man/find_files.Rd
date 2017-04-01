@@ -22,6 +22,8 @@ find_files("http://www.abc.net.au/", "htm")
 aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
 find_files(aec_website, "zip")
 find_files(aec_website, "zip") \%>\% url_convert(aec_website)
+\dontrun{
 (find_files(aec_website, "zip") \%>\% url_convert(aec_website))[c(1,2)] \%>\% download.files()
+}
 }
 
