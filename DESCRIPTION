@@ -1,6 +1,6 @@
-Package: URLazyR
-Title: Download files from websites in R
-Version: 0.0.0.9000
+Package: sawfish
+Title: See A Web File In Some HTML
+Version: 0.0.0.9001
 Authors@R: c(person("Di", "Cook", role = c("aut")), 
               person("Anthony", "Ebert", role = c("aut", "cre"), email = "anthonyebert+CRAN@gmail.com"))
 Description: Searches html pages for urls with certain file extensions and provides an easy way to download them
