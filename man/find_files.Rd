@@ -4,12 +4,14 @@
 \alias{find_files}
 \title{List all files with a certain extension from a URL}
 \usage{
-find_files(url, extension)
+find_files(url, extension, absolute = TRUE)
 }
 \arguments{
 \item{url}{string of URL}
 
 \item{extension}{string of file extension required (without the dot)}
+
+\item{absolute}{logical should relative URLs be converted to absolute URLs?}
 }
 \value{
 Character vector of URLs
@@ -18,12 +20,9 @@ Character vector of URLs
 List all files with a certain extension from a URL
 }
 \examples{
-find_files("http://www.abc.net.au/", "htm")
 aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
 find_files(aec_website, "zip")
-find_files(aec_website, "zip") \%>\% url_convert(aec_website)
 \dontrun{
-(find_files(aec_website, "zip") \%>\% url_convert(aec_website))[c(1,2)] \%>\% download.files()
+find_files(aec_website, "zip")[c(1,2)] \%>\% download.files()
 }
 }
-

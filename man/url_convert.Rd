@@ -11,15 +11,11 @@ url_convert(url, base = attr(url, "base"))
 
 \item{base}{string of domain URL}
 }
-\value{
-character vector of absolute URLs
-}
 \description{
 Convert URLs (relative or absolute) to absolute URLs
 }
 \examples{
 aec_website <- "http://www.aec.gov.au/Electorates/gis/gis_datadownload.htm"
-find_files(aec_website, "zip") \%>\% url_convert(aec_website)
-find_files("https://catalog.data.gov/dataset?metadata_type=geospatial&_metadata_type_limit=0&q=\%22Congressional\%20Districts\%22", "zip") \%>\% url_convert()
+find_files(aec_website, "zip")
+find_files("https://catalog.data.gov/dataset?metadata_type=geospatial&_metadata_type_limit=0&q=\%22Congressional\%20Districts\%22", "zip")
 }
-

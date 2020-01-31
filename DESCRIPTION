@@ -1,6 +1,6 @@
 Package: sawfish
 Title: See A Web File In Some HTML
-Version: 0.0.0.9001
+Version: 0.1.1
 Authors@R: c(person("Di", "Cook", role = c("aut")), 
               person("Anthony", "Ebert", role = c("aut", "cre"), email = "anthonyebert+CRAN@gmail.com"))
 Description: Searches html pages for urls with certain file extensions and provides an easy way to download them
@@ -13,4 +13,4 @@ Imports:
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 7.0.2

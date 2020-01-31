@@ -4,17 +4,18 @@
 \alias{download.files}
 \title{Download multiple files given a list of URLs}
 \usage{
-download.files(url, destfile = basename(url))
+download.files(url, destfile = basename(url), ...)
 }
 \arguments{
-\item{url}{character vector of URLs}
+\item{url}{character vector of URLs from \code{\link{find_files}}}
 
 \item{destfile}{character vector of resulting filenames}
+
+\item{...}{arguments passed to \code{\link{download.file}}}
 }
 \value{
-VOID
+VOID no value returned in R. It does download the files however!
 }
 \description{
 Download multiple files given a list of URLs
 }
-
